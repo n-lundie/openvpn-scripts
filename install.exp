@@ -1,0 +1,24 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn ./openvpn-install.sh
+
+expect {Public IPv4 address / }
+send -- "\n"
+
+expect {Protocol \[1\]:}
+send -- "\n"
+
+expect {Port \[1194\]:}
+send -- "\n"
+
+expect {DNS server \[1\]:}
+send -- "2\n"
+
+expect {Name \[client\]:}
+send -- "init\n"
+
+expect {Press any key to continue...}
+send -- "\n"
+
+expect eof
