@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn ./openvpn-install.sh
+
+expect "Option: "
+send -- "1\n"
+
+expect "Name: "
+send -- "test\n"
+
+expect eof
