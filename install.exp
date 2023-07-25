@@ -16,7 +16,7 @@ expect {DNS server \[1\]:}
 send -- "2\n"
 
 expect {Name \[client\]:}
-send -- "init\n"
+send -- "\n"
 
 expect {Press any key to continue...}
 send -- "\n"
