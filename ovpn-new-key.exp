@@ -1,5 +1,7 @@
 #!/usr/bin/expect -f
 
+set client [lindex $argv 0];
+
 set timeout -1
 spawn ./openvpn-install.sh
 
@@ -7,6 +9,6 @@ expect "Option: "
 send -- "1\n"
 
 expect "Name: "
-send -- "${1}\n"
+send -- "$client\n"
 
 expect eof
