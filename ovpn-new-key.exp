@@ -7,6 +7,6 @@ expect "Option: "
 send -- "1\n"
 
 expect "Name: "
-send -- "test\n"
+send -- "${1}\n"
 
 expect eof
