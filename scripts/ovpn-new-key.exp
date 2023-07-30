@@ -12,12 +12,9 @@ expect "Name: "
 send -- "$client\n"
 
 expect {
-  "Using Easy-RSA configuration:" {
-    exp_continue
-  }
   "invalid name." {
     exit 1
   }
-}
 
-expect eof
+  expect eof
+}
