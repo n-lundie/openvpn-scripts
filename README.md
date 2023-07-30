@@ -2,7 +2,7 @@
 Expect scripts for automating interactions with [openvpn-install](https://github.com/Nyr/openvpn-install).
 
 ## Testing
-A docker file has been created to allow integration testing in an environment configured with [openvpn-install](https://github.com/Nyr/openvpn-install).
+A Dockerfile has been created to allow integration testing in an environment configured with [openvpn-install](https://github.com/Nyr/openvpn-install).
 
 **Steps to test:**
 
