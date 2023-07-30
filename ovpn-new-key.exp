@@ -11,4 +11,13 @@ send -- "1\n"
 expect "Name: "
 send -- "$client\n"
 
+expect {
+  "OpenVPN installation is ready to begin." {
+    exp_continue
+  }
+  "invalid name." {
+    exit 1
+  }
+}
+
 expect eof
