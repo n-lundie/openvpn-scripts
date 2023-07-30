@@ -12,7 +12,7 @@ expect "Name: "
 send -- "$client\n"
 
 expect {
-  "OpenVPN installation is ready to begin." {
+  "Using Easy-RSA configuration:" {
     exp_continue
   }
   "invalid name." {
