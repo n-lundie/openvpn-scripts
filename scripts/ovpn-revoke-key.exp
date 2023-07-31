@@ -1,0 +1,25 @@
+#!/usr/bin/expect -f
+
+set option [lindex $argv 0];
+
+set timeout -1
+spawn ./openvpn-install.sh
+
+expect "Option: "
+send -- "2\n"
+
+expect "Client: "
+send -- "$option\n"
+
+expect {
+  "invalid selection." {
+    exit 1
+  }
+  
+  {revocation? \[y/N\]:} {
+    send -- "y\n"
+  }
+
+}
+
+expect eof
