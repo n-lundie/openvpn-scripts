@@ -17,6 +17,4 @@ if [ ! -f /home/ubuntu/init.done ]; then
   sudo cp /root/client.ovpn ./client.ovpn
 
   touch init.done
-
-  sudo reboot
 fi
