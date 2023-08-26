@@ -13,7 +13,7 @@ expect {Port \[1194\]:}
 send -- "\n"
 
 expect {DNS server \[1\]:}
-send -- "2\n"
+send -- "3\n"
 
 expect {Name \[client\]:}
 send -- "\n"
