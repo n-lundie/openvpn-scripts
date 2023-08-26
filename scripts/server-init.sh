@@ -12,7 +12,7 @@ if [ ! -f /home/ubuntu/init.done ]; then
   wget https://raw.githubusercontent.com/n-lundie/openvpn-scripts/main/scripts/ovpn-install.exp -O ovpn-install.exp
   sudo chmod +x ./ovpn-install.exp
 
-  sudo ./ovpn-install.exp
+  sudo NEEDRESTART_MODE=a ./ovpn-install.exp
 
   sudo cp /root/client.ovpn ./client.ovpn
 
