@@ -9,7 +9,7 @@ if [ ! -f /home/ubuntu/init.done ]; then
   wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
   sudo chmod +x ./openvpn-install.sh
 
-  wget https://raw.githubusercontent.com/n-lundie/openvpn-scripts/main/ovpn-install.exp -O ovpn-install.exp
+  wget https://raw.githubusercontent.com/n-lundie/openvpn-scripts/main/scripts/ovpn-install.exp -O ovpn-install.exp
   sudo chmod +x ./ovpn-install.exp
 
   sudo ./install.exp
