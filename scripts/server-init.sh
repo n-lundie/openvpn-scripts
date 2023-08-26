@@ -2,7 +2,7 @@
 
 if [ ! -f /home/ubuntu/init.done ]; then
   sudo apt update && sudo NEEDRESTART_MODE=a apt upgrade -y
-  sudo apt install expect -y
+  sudo NEEDRESTART_MODE=a apt install expect -y
 
   cd /home/ubuntu
 
