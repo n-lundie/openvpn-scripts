@@ -1,13 +1,8 @@
 #!/bin/bash
 
-if [ ! -f /home/ubuntu/update.done ]; then
-  sudo apt update && sudo apt upgrade -y
+if [ ! -f /home/ubuntu/init.done ]; then
+  sudo apt update && sudo NEEDRESTART_MODE=a apt upgrade -y
   sudo apt install expect -y
-
-  touch /home/ubuntu/update.done
-
-  sudo reboot
-elif [ ! -f /home/ubuntu/init.done ]; then
 
   cd /home/ubuntu
 
@@ -22,4 +17,6 @@ elif [ ! -f /home/ubuntu/init.done ]; then
   sudo cp /root/client.ovpn ./client.ovpn
 
   touch init.done
+
+  sudo reboot
 fi
